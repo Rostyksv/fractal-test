@@ -18,5 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/webhooks-fractal', (req, res) => {
+    console.log('Webhook received:', req.body);
+    // Handle the webhook payload here
+
+    res.status(400).send('Webhook received successfully');
+});
 
 module.exports = app;
