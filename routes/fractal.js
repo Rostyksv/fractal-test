@@ -5,7 +5,9 @@ router.post('/', (req, res) => {
     console.log('Webhook received:', req.body);
     // Handle the webhook payload here
 
-    res.status(400).send('Webhook received successfully');
+    res.status(200).send('Webhook received successfully');
 });
+
+
 
 module.exports = router;
